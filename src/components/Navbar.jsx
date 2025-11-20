@@ -74,7 +74,6 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
         <button
           onClick={() => handleScroll("Home")}
           className="text-3xl font-bold text-white"
@@ -82,13 +81,12 @@ const Navbar = () => {
           Portfolio
         </button>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-x-8">
           {navLinks.map((link) => (
             <li key={link}>
               <button
                 onClick={() => handleScroll(link)}
-                className={`transition-colors duration-300 ${
+                className={`transition-colors duration-300 cursor-pointer ${
                   activeSection === link
                     ? "text-purple-500 font-semibold"
                     : "text-white hover:text-purple-400"
@@ -100,16 +98,14 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden focus:outline-none text-white"
+          className="md:hidden cursor-pointer focus:outline-none text-white"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-2/3 bg-black shadow-lg transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
@@ -117,7 +113,7 @@ const Navbar = () => {
       >
         <div className="flex justify-end p-4">
           <button onClick={() => setMenuOpen(false)}>
-            <X size={28} className="text-white" />
+            <X size={28} className="text-white cursor-pointer" />
           </button>
         </div>
 

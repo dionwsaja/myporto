@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import linkedin from "../assets/social/linkedin.png";
 import instagram from "../assets/social/ig.png";
 import github from "../assets/social/github.png";
@@ -8,19 +8,60 @@ import line from "../assets/line_2_purple.png";
 import { MdArrowOutward } from "react-icons/md";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("https://formspree.io/f/mnnwoqqn", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      alert("Something went wrong.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div id="contact" className="py-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Title */}
         <div className="flex justify-center pb-8">
           <span className="text-center text-4xl bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent font-bold md:text-5xl">
             Contact Me
           </span>
         </div>
 
-        {/* Content */}
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Left: Social Links */}
+          {/* SOCIALS */}
           <div className="w-full lg:w-5/12 flex flex-col gap-4 bg-transparent p-4 rounded-xl border border-purple-600/50 shadow-purple-600 shadow-md">
             <div>
               <p className="flex items-center gap-x-3 text-lg">
@@ -30,7 +71,6 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col gap-y-4">
-              {/* Social Cards */}
               {[
                 {
                   href: "https://www.linkedin.com/in/dionwangsa/",
@@ -93,7 +133,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right: Message Form */}
+          {/* FORM */}
           <div className="w-full lg:w-7/12 flex flex-col gap-y-4 p-4 border border-purple-600/50 rounded-lg shadow-md shadow-purple-600 bg-transparent">
             <div className="text-center">
               <p className="text-2xl font-bold md:text-3xl">Get In Touch</p>
@@ -102,55 +142,65 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-y-5">
-              {/* Inputs */}
-              <div className="flex flex-col gap-y-6">
-                {[
-                  {
-                    label: "Your Name",
-                    type: "text",
-                    placeholder: "Your Name",
-                  },
-                  {
-                    label: "Your Email",
-                    type: "email",
-                    placeholder: "Your Email",
-                  },
-                  {
-                    label: "Your Message",
-                    type: "text",
-                    placeholder: "Your Message",
-                    large: true,
-                  },
-                ].map((input, i) => (
-                  <div key={i} className="flex flex-col">
-                    <label className="text-lg mb-1">{input.label}</label>
-                    <input
-                      type={input.type}
-                      placeholder={input.placeholder}
-                      className={`outline-0 border-0 bg-white text-black px-4 py-3 rounded-lg ${
-                        input.large ? "pb-16" : ""
-                      }`}
-                    />
-                  </div>
-                ))}
+            <form onSubmit={handleSubmit} className="flex flex-col gap-y-6">
+              {/* NAME */}
+              <div className="flex flex-col">
+                <label className="text-lg mb-1">Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="outline-0 border-0 bg-white text-black px-4 py-3 rounded-lg"
+                />
               </div>
 
-              {/* Button */}
-              <div>
-                <button className="flex items-center justify-center w-full py-3 rounded-lg bg-purple-600 hover:bg-white hover:text-purple-600 hover:border hover:border-purple-600 transition duration-150 font-medium">
-                  Send Message
-                  <span className="ml-2 text-lg">
-                    <MdArrowOutward />
-                  </span>
-                </button>
+              {/* EMAIL */}
+              <div className="flex flex-col">
+                <label className="text-lg mb-1">Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="outline-0 border-0 bg-white text-black px-4 py-3 rounded-lg"
+                />
               </div>
-            </div>
+
+              {/* MESSAGE */}
+              <div className="flex flex-col">
+                <label className="text-lg mb-1">Your Message</label>
+                <textarea
+                  name="message"
+                  required
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="outline-0 border-0 bg-white text-black px-4 py-3 rounded-lg h-32"
+                ></textarea>
+              </div>
+
+              {/* BUTTON */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex items-center justify-center w-full py-3 rounded-lg bg-purple-600 hover:bg-white hover:text-purple-600 hover:border hover:border-purple-600 transition duration-150 font-medium"
+              >
+                {loading ? "Sending..." : "Send Message"}
+                <span className="ml-2 text-lg">
+                  <MdArrowOutward />
+                </span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
 
-      {/* Background line */}
+      {/* BACKGROUND LINE */}
       <img
         src={line}
         className="absolute top-0 -z-10 opacity-20 w-full h-full object-cover"
