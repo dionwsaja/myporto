@@ -11,30 +11,32 @@ const Hero = () => {
             <div>
               <h1 className="text-7xl font-bold">
                 Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-purple-600  to-cyan-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#004fff]  to-[#56b4f0] bg-clip-text text-transparent">
                   Dion
                 </span>
               </h1>
             </div>
             <div>
-              <p className="text-xl">Web Developer, Graphic Designer</p>
+              <p className="text-xl">
+                Web Developer, AI Enthusiast, Entrepreneur
+              </p>
             </div>
             <div>
               <p>
-                Helping brands and individuals build their online presence
-                through modern web development and creative design.
+                Fullstack Developer with a passion for AI-driven solutions and
+                entrepreneurial growth.
               </p>
             </div>
             <div className="flex items-center gap-8">
               <a
                 href="#projects"
-                className="px-8 py-3 bg-purple-600 hover:bg-transparent hover:border hover:border-purple-600 transition-all ease-in-out duration-100 "
+                className="px-8 py-3 bg-[#004fff] hover:bg-transparent hover:border hover:border-[#004fff] transition-all ease-in-out duration-100 "
               >
                 Projects
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3 border border-purple-600 hover:bg-purple-600 hover:border hover:border-purple-600 transition-all ease-in-out duration-100"
+                className="px-8 py-3 border border-[#004fff] hover:bg-[#004fff] hover:border hover:border-[#004fff] transition-all ease-in-out duration-100"
               >
                 Contact Me
               </a>

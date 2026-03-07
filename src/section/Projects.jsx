@@ -4,13 +4,14 @@ import wedding from "../assets/projects/wedding.png";
 import ac from "../assets/projects/ac.png";
 import fusion from "../assets/projects/fusion.png";
 import profitara from "../assets/projects/profitara.png";
+import kolosal from "../assets/projects/kolosal.png";
 
 const Projects = () => {
   return (
     <div id="projects">
       <div className="max-w-7xl mx-auto py-16 px-4">
         <div className="flex w-full py-8 items-center justify-center">
-          <span className="text-center text-4xl bg-gradient-to-r from-purple-600  to-cyan-500 bg-clip-text text-transparent font-bold md:text-5xl">
+          <span className="text-center text-4xl bg-gradient-to-r from-[#004fff]  to-[#56b4f0] bg-clip-text text-transparent font-bold md:text-5xl">
             Projects
           </span>
         </div>
@@ -20,9 +21,22 @@ const Projects = () => {
             target="_blank"
             className="hover:scale-102 transition-all ease-in-out duration-200 "
           >
-            <div className="w-full  h-full   rounded-lg overflow-hidden md:h-[250px] border border-purple-600">
+            <div className="w-full  h-full   rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
               <img
                 src={ac}
+                alt=""
+                className="object-cover h-full w-full bg-center bg-no-repeat"
+              />
+            </div>
+          </a>
+          <a
+            href="https://kolosalproduction.vercel.app"
+            target="_blank"
+            className="hover:scale-102 transition-all ease-in-out duration-200 "
+          >
+            <div className="w-full  h-full   rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
+              <img
+                src={kolosal}
                 alt=""
                 className="object-cover h-full w-full bg-center bg-no-repeat"
               />
@@ -33,7 +47,7 @@ const Projects = () => {
             target="_blank"
             className="hover:scale-102 transition-all ease-in-out duration-200"
           >
-            <div className="w-full rounded-lg overflow-hidden md:h-[250px] border border-purple-600">
+            <div className="w-full rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
               <img
                 src={minimiwaste}
                 alt=""
@@ -46,7 +60,7 @@ const Projects = () => {
             target="_blank"
             className="hover:scale-102 transition-all ease-in-out duration-200"
           >
-            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-purple-600">
+            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
               <img
                 src={wedding}
                 alt=""
@@ -59,7 +73,7 @@ const Projects = () => {
             target="_blank"
             className="hover:scale-102 transition-all ease-in-out duration-200"
           >
-            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-purple-600">
+            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
               <img
                 src={profitara}
                 alt=""
@@ -72,7 +86,7 @@ const Projects = () => {
             target="_blank"
             className="hover:scale-102 transition-all ease-in-out duration-200"
           >
-            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-purple-600">
+            <div className="w-full   rounded-lg overflow-hidden md:h-[250px] border border-[#004fff]/30">
               <img
                 src={fusion}
                 alt=""

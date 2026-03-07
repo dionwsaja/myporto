@@ -47,7 +47,7 @@ const Navbar = () => {
 
       for (const link of navLinks) {
         const section = document.getElementById(
-          link.toLowerCase().replace(" ", "-")
+          link.toLowerCase().replace(" ", "-"),
         );
         if (section) {
           const { offsetTop, offsetHeight } = section;
@@ -88,8 +88,8 @@ const Navbar = () => {
                 onClick={() => handleScroll(link)}
                 className={`transition-colors duration-300 cursor-pointer ${
                   activeSection === link
-                    ? "text-purple-500 font-semibold"
-                    : "text-white hover:text-purple-400"
+                    ? "text-[#004fff  ] font-semibold"
+                    : "text-white hover:text-[#004fff]"
                 }`}
               >
                 {link}

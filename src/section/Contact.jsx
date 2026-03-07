@@ -55,17 +55,16 @@ const Contact = () => {
     <div id="contact" className="py-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center pb-8">
-          <span className="text-center text-4xl bg-gradient-to-r from-purple-600 to-cyan-500 bg-clip-text text-transparent font-bold md:text-5xl">
+          <span className="text-center text-4xl bg-gradient-to-r from-[#004fff]  to-[#56b4f0] bg-clip-text text-transparent font-bold md:text-5xl">
             Contact Me
           </span>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* SOCIALS */}
-          <div className="w-full lg:w-5/12 flex flex-col gap-4 bg-transparent p-4 rounded-xl border border-purple-600/50 shadow-purple-600 shadow-md">
+          <div className="w-full lg:w-5/12 flex flex-col gap-4 bg-transparent p-4 rounded-xl border border-[#004fff]/50 shadow-[#004fff] shadow-md">
             <div>
               <p className="flex items-center gap-x-3 text-lg">
-                <span className="w-[30px] h-[2px] bg-purple-600"></span>Connect
+                <span className="w-[30px] h-[2px] bg-[#004fff]"></span>Connect
                 With Me
               </p>
             </div>
@@ -133,8 +132,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* FORM */}
-          <div className="w-full lg:w-7/12 flex flex-col gap-y-4 p-4 border border-purple-600/50 rounded-lg shadow-md shadow-purple-600 bg-transparent">
+          <div className="w-full lg:w-7/12 flex flex-col gap-y-4 p-4 border border-[#004fff]/50 rounded-lg shadow-md shadow-[#004fff] bg-transparent">
             <div className="text-center">
               <p className="text-2xl font-bold md:text-3xl">Get In Touch</p>
               <p className="text-gray-400 text-sm sm:text-base">
@@ -143,7 +141,6 @@ const Contact = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-y-6">
-              {/* NAME */}
               <div className="flex flex-col">
                 <label className="text-lg mb-1">Your Name</label>
                 <input
@@ -171,7 +168,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* MESSAGE */}
               <div className="flex flex-col">
                 <label className="text-lg mb-1">Your Message</label>
                 <textarea
@@ -184,11 +180,10 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              {/* BUTTON */}
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center w-full py-3 rounded-lg bg-purple-600 hover:bg-white hover:text-purple-600 hover:border hover:border-purple-600 transition duration-150 font-medium"
+                className="flex items-center justify-center w-full py-3 rounded-lg bg-[#004fff] hover:bg-white hover:text-[#004fff] hover:border hover:border-[#004fff] transition duration-150 font-medium"
               >
                 {loading ? "Sending..." : "Send Message"}
                 <span className="ml-2 text-lg">
