@@ -94,7 +94,7 @@ const Contact = () => {
                   hover: "hover:from-gray-900 hover:to-gray-400",
                 },
                 {
-                  href: "https://www.tiktok.com/@dionwan6?_t=ZS-8zC7UVBphoI&_r=1",
+                  href: "https://www.tiktok.com/@dionwsa?_r=1&_t=ZS-94hS96SDISP",
                   img: tiktok,
                   title: "Follow Me",
                   subtitle: "on TikTok",
