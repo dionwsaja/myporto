@@ -93,7 +93,7 @@ const About = () => {
             <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-[#004fff]/50 hover:bg-slate-800/60 transition-all duration-300">
               <div className="flex justify-between items-start mb-2">
                 <h4 className="text-xl font-semibold text-white">
-                  Fullstack Web Developer
+                  Frontend Web Developer
                 </h4>
                 <span className="text-sm font-medium text-[#56b4f0]">
                   2024 - Present
@@ -103,6 +103,22 @@ const About = () => {
               <p className="text-slate-300 text-sm leading-relaxed">
                 Membangun aplikasi web menggunakan ekosistem Next.js dan
                 TypeScript. Saat ini mulai mengeksplorasi integrasi Web3.
+              </p>
+            </div>
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-[#004fff]/50 hover:bg-slate-800/60 transition-all duration-300">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-semibold text-white">
+                  Co-Founder and CTO of Kolosal Production
+                </h4>
+                <span className="text-sm font-medium text-[#56b4f0]">
+                  2025 - Present
+                </span>
+              </div>
+              <p className="text-slate-400 font-medium mb-3">Entrepreneur</p>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Membangun sebuah Agency yang telah melayani berbagai macam
+                layanan digital dan multimedia seperti Konser, Wedding, Campus
+                Event, Product Photos, dll. (instagram: @kolosalproduction)
               </p>
             </div>
           </div>
@@ -149,6 +165,24 @@ const About = () => {
               <p className="text-slate-300 text-sm leading-relaxed">
                 Menyelesaikan program literasi keuangan, struktur ekuitas, dan
                 dinamika pasar modal langsung di BEI SCBD.
+              </p>
+            </div>
+            <div className="bg-slate-800/40 p-6 rounded-xl border border-slate-700/50 hover:border-[#004fff]/50 hover:bg-slate-800/60 transition-all duration-300">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="text-xl font-semibold text-white">
+                  Volunteer Panitia Green Generation Surabaya
+                </h4>
+                <span className="text-sm font-medium text-[#56b4f0]">
+                  Jan 2026
+                </span>
+              </div>
+              <p className="text-slate-400 font-medium mb-3">
+                GG Beraksi 3.0 Surabaya 1 Januari 2026
+              </p>
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Menjadi Volunteer Panitia untuk GG Beraksi 3.0 Surabaya yang
+                bertugas sebagai sesi dokumentasi dan peralatan serta
+                perlengkapan.
               </p>
             </div>
           </div>
